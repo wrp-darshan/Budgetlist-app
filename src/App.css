@@ -1,0 +1,62 @@
+:root {
+  --primary-color: #7b56ff;
+  --secondary-color: #ebf2fc;
+  --text-color: #5b657a;
+  --success-color: #a9e61c;
+  --danger-color: #ff6fb7;
+  --bg-gradient: linear-gradient(-135deg, var(--primary-color) 40%, #52e2ff 120%);
+  --box-shadow: 0px 20px 40px rgba(91, 101, 122, 0.15);
+  --border-radius: 0.6rem;
+  --white: #fff;
+  --gray: #bec8e4;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--secondary-color);
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--secondary-color);
+  height: 100vh;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: 40% 60%;
+  flex-direction: column;
+  height: 38rem;
+  width: 300px;
+  margin: 50px 20px;
+  box-shadow: 0px 20px 40px rgba(91, 101, 122, 0.15);
+  border-radius: 2rem;
+  background: var(--white);
+  color: var(--text-color);
+  letter-spacing: 0.04rem;
+}
+
+@media (max-width: 768px) {
+  .app {
+    height: 100%;
+    flex-wrap: wrap;
+  }
+  .page{
+    margin: 25px auto;
+  }
+}

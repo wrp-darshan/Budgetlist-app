@@ -1,0 +1,125 @@
+.type-tab {
+  display: flex;
+  width: 202px;
+  background: var(--secondary-color);
+  border-radius: var(--border-radius);
+  position: relative;
+}
+
+.type-tab input {
+  display: none;
+}
+
+.type-tab label {
+  padding: 8px 0;
+  cursor: pointer;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 999;
+  border-radius: var(--border-radius);
+}
+
+.type-tab label:hover {
+  color: var(--primary-color);
+}
+
+.type-tab > input:checked + label {
+  color: var(--white);
+  border-radius: var(--border-radius);
+}
+
+.type-tab #tab-1:checked~.type-color {
+  transform: translateX(0%);
+  background: var(--primary-color);
+  transition: transform 0.5s ease, background-color 0.3s ease;
+}
+
+.type-tab #tab-2:checked~.type-color {
+  transform: translateX(100%);
+  background: var(--primary-color);
+
+  transition: transform 0.5s ease, background-color 0.3s ease;
+}
+
+.type-color {
+  background: var(--primary-color);
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  border-radius: var(--border-radius);
+  z-index: 200;
+  transition: transform 0.5s ease, background-color 0.3s ease;
+}
+
+.type {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 40px;
+  margin: 40px 0;
+  padding: 0 24px;
+  border-radius: 2rem;
+}
+
+.type-amount {
+  grid-row: 3 / 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 4px 0 10px 0;
+}
+
+.type-amount p {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.type-amount button span {
+  font-size: 36px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding: 40px 24px;
+  margin: 5px 0;
+}
+
+.cal-num {
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.cal-cancel {
+  color: #bec8e4;
+  cursor: pointer;
+}
+.cal-num:hover,
+.cal-cancel:hover {
+  color: var(--primary-color);
+}
+.cal-cancel span{
+  font-size: 30px;
+}
